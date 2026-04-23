@@ -42,7 +42,7 @@ echo Install kubectl
 
 # curl -LO "https://dl.k8s.io/release/$(curl -L -s https://dl.k8s.io/release/stable.txt)/bin/linux/amd64/kubectl"
 
-# sudo install -o root -g root -m 0755 kubectl /usr/local/bin/kubectl
+ 
 
 sudo apt-get update
 # apt-transport-https may be a dummy package; if so, you can skip that package
@@ -60,7 +60,6 @@ sudo chmod 644 /etc/apt/sources.list.d/kubernetes.list
 sudo apt-get update
 sudo apt-get install -y kubectl
 
-
 # Install argoCD
 echo Install argoCD
 
@@ -72,6 +71,6 @@ rm argocd-linux-amd64
 echo Add access to docker
 
 sudo usermod -aG docker $USER 
-# newgrp docker
+newgrp docker
 
 echo Install Finish
